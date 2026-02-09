@@ -1,0 +1,40 @@
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-16">
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          {/* Terms and conditions link */}
+          <div className="flex items-center space-x-6">
+            <a
+              href="/terms"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Terms and Conditions
+            </a>
+            <a
+              href="/privacy"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Privacy
+            </a>
+          </div>
+
+          {/* GitHub link */}
+          <div className="flex items-center space-x-6">
+            <a
+              href="https://github.com/vibecode/vibecode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              GitHub
+            </a>
+            <span className="text-xs text-muted-foreground">
+              © 2026 VibeCodeJS
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
