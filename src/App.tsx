@@ -332,11 +332,13 @@ function App() {
       <div className="max-w-3xl mx-auto px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Vibe Code JS</h1>
+          <h1 className="text-4xl font-bold mb-4">
+            Learn <span className="text-primary">JavaScript</span>
+          </h1>
+          <h2 className="text-2xl font-bold mb-2">
+            by Building First, Understanding Later
+          </h2>
           <p className="text-xl text-muted-foreground mb-2">
-            Learn JavaScript by Building First, Understanding Later
-          </p>
-          <p className="text-muted-foreground">
             The easiest way to learn JavaScript: vibe coding with a cookbook
             approach.
           </p>

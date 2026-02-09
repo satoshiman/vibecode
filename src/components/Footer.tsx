@@ -5,7 +5,15 @@ interface FooterProps {
 
 export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
   return (
-    <footer className="border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-16">
+    <footer className="border-t border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 mt-16">
+      {/* Development notice */}
+      <div className="text-center mt-4 pt-4">
+        <p className="text-xs text-muted-foreground">
+          🚧 The content is currently in development. New features coming soon
+          👀
+        </p>
+      </div>
+
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Terms and conditions links */}
