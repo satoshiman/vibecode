@@ -1,22 +1,27 @@
-export function Footer() {
+interface FooterProps {
+  onPrivacyClick: () => void;
+  onTermsClick: () => void;
+}
+
+export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
   return (
     <footer className="border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-16">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          {/* Terms and conditions link */}
+          {/* Terms and conditions links */}
           <div className="flex items-center space-x-6">
-            <a
-              href="/terms"
+            <button
+              onClick={onTermsClick}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Terms and Conditions
-            </a>
-            <a
-              href="/privacy"
+            </button>
+            <button
+              onClick={onPrivacyClick}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Privacy
-            </a>
+            </button>
           </div>
 
           {/* GitHub link */}

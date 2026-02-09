@@ -1,13 +1,16 @@
 import { ConceptCard } from "@/components/ConceptCard";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PrivacyModal } from "@/components/PrivacyModal";
 import { SetupStepCard } from "@/components/SetupStepCard";
+import { TermsModal } from "@/components/TermsModal";
 import { Timeline } from "@/components/Timeline";
-import { PrivacyPage } from "@/pages/PrivacyPage";
-import { TermsPage } from "@/pages/TermsPage";
-import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+
   // Section 1 - Environment Setup Data
   const setupSteps = [
     {
@@ -324,77 +327,78 @@ function App() {
   ];
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <div className="min-h-screen bg-background">
-            <Header />
-            <div className="max-w-3xl mx-auto px-4 py-8">
-              {/* Header */}
-              <header className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-4">Vibe Code JS</h1>
-                <p className="text-xl text-muted-foreground mb-2">
-                  Learn JavaScript by Building First, Understanding Later
-                </p>
-                <p className="text-muted-foreground">
-                  The easiest way to learn JavaScript: vibe coding with a
-                  cookbook approach.
-                </p>
-              </header>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        {/* Header */}
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">Vibe Code JS</h1>
+          <p className="text-xl text-muted-foreground mb-2">
+            Learn JavaScript by Building First, Understanding Later
+          </p>
+          <p className="text-muted-foreground">
+            The easiest way to learn JavaScript: vibe coding with a cookbook
+            approach.
+          </p>
+        </header>
 
-              {/* Section 1 - Environment Setup */}
-              <section className="mb-16">
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-2">Environment Setup</h2>
-                  <p className="text-muted-foreground">
-                    Everything you need to start coding immediately
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  {setupSteps.map((step, index) => (
-                    <SetupStepCard key={index} {...step} />
-                  ))}
-                </div>
-              </section>
-
-              {/* Section 2 - Core Fundamentals */}
-              <section className="mb-16">
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-2">Core Fundamentals</h2>
-                  <p className="text-muted-foreground">
-                    The minimum knowledge required to start building real
-                    projects
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {concepts.map((concept, index) => (
-                    <ConceptCard key={index} {...concept} />
-                  ))}
-                </div>
-              </section>
-
-              {/* Section 3 - Vibe Code Cookbook */}
-              <section className="mb-16">
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-2">
-                    Vibe Code Cookbook
-                  </h2>
-                  <p className="text-muted-foreground">
-                    Each milestone is a practical recipe. Build first, learn
-                    along the way
-                  </p>
-                </div>
-                <Timeline milestones={milestones} />
-              </section>
-            </div>
-            <Footer />
+        {/* Section 1 - Environment Setup */}
+        <section className="mb-16">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2">Environment Setup</h2>
+            <p className="text-muted-foreground">
+              Everything you need to start coding immediately
+            </p>
           </div>
-        }
+          <div className="space-y-4">
+            {setupSteps.map((step, index) => (
+              <SetupStepCard key={index} {...step} />
+            ))}
+          </div>
+        </section>
+
+        {/* Section 2 - Core Fundamentals */}
+        <section className="mb-16">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2">Core Fundamentals</h2>
+            <p className="text-muted-foreground">
+              The minimum knowledge required to start building real projects
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {concepts.map((concept, index) => (
+              <ConceptCard key={index} {...concept} />
+            ))}
+          </div>
+        </section>
+
+        {/* Section 3 - Vibe Code Cookbook */}
+        <section className="mb-16">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2">Vibe Code Cookbook</h2>
+            <p className="text-muted-foreground">
+              Each milestone is a practical recipe. Build first, learn along the
+              way
+            </p>
+          </div>
+          <Timeline milestones={milestones} />
+        </section>
+      </div>
+      <Footer
+        onPrivacyClick={() => setIsPrivacyModalOpen(true)}
+        onTermsClick={() => setIsTermsModalOpen(true)}
       />
-      <Route path="/terms" element={<TermsPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
-    </Routes>
+
+      {/* Modals */}
+      <PrivacyModal
+        isOpen={isPrivacyModalOpen}
+        onClose={() => setIsPrivacyModalOpen(false)}
+      />
+      <TermsModal
+        isOpen={isTermsModalOpen}
+        onClose={() => setIsTermsModalOpen(false)}
+      />
+    </div>
   );
 }
 

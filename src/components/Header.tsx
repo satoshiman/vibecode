@@ -1,5 +1,4 @@
 import { Wand } from "lucide-react";
-import { Link } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
@@ -8,15 +7,12 @@ export function Header() {
       <div className="max-w-3xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo on the left */}
-          <Link
-            to="/"
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
-          >
+          <div className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer">
             <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
               <Wand className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-semibold text-lg">VibeCodeJS</span>
-          </Link>
+          </div>
 
           {/* Theme toggle and "post this" link on the right */}
           <div className="flex items-center space-x-4">
