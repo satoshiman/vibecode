@@ -39,13 +39,13 @@ This platform provides comprehensive JavaScript learning materials that are cont
 
 _This learning content is regularly updated to ensure you have access to the latest JavaScript development practices and trends._
 
-## �💻 Author
+## 👨‍💻 Author
 
 **Truong Ngoc Vuong**
 
 Website: [https://github.com/satoshiman](https://github.com/satoshiman)
 
-## ��️ Tech Stack
+## 💻 Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite
 - **Styling**: Tailwind CSS v4, shadcn/ui components

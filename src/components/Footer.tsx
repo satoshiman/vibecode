@@ -35,7 +35,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
           {/* GitHub link */}
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com/vibecode/vibecode"
+              href="https://github.com/satoshiman/vibecode"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
