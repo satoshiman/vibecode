@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# VibeCode - Learn JavaScript by Building
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive JavaScript learning platform that teaches programming through practical projects. Built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🎯 Philosophy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Build First, Understand Later** - We believe the best way to learn JavaScript is by actually building things. This platform provides a cookbook approach with practical recipes that guide you from zero to full-stack developer.
 
-## React Compiler
+## 📚 Learning Content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This platform provides comprehensive JavaScript learning materials that are continuously updated with new content and improvements.
 
-## Expanding the ESLint configuration
+### 🛠️ Environment Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Step-by-step guides for setting up your development environment
+- Node.js installation and verification
+- VS Code configuration with essential extensions
+- Terminal basics and project initialization
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📚 Core Fundamentals
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Variables & Data Types** - Store and manipulate data
+- **Functions** - Reusable blocks of code
+- **Objects & Arrays** - Organize complex data
+- **Control Flow** - Make decisions and automate tasks
+- **Asynchronous Basics** - Handle operations that take time
+- **Modules & Imports** - Organize code into maintainable pieces
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🚀 Vibe Code Cookbook
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+6 practical milestones that take you from beginner to full-stack developer:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Run Your First JavaScript Script** - Experience instant feedback
+2. **Build a Simple HTTP Server** - Create your first backend
+3. **Create Your First API Endpoint** - Serve real data
+4. **Connect Frontend to Backend** - Full-stack workflow
+5. **Build a React Interface** - Modern UI development
+6. **Ship a Real Project** - Deploy to production
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+_This learning content is regularly updated to ensure you have access to the latest JavaScript development practices and trends._
+
+## �💻 Author
+
+**Truong Ngoc Vuong**
+
+Website: [https://github.com/satoshiman](https://github.com/satoshiman)
+
+## ��️ Tech Stack
+
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS v4, shadcn/ui components
+- **Icons**: Lucide React
+- **Build Tools**: Vite, ESLint
+- **UI Components**: Radix UI primitives
+
+---
+
+Built with ❤️ for the JavaScript community. Happy coding!
